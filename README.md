@@ -11,7 +11,7 @@ This project addresses the **0/1 Knapsack problem** applied to logistics: how to
   - **Integer Linear Programming (ILP)** with Branch-and-Bound – optimal search with pruning.
   - (Optional) **Genetic Algorithm** – experimental solver for evolutionary optimization.
 
-##  Tech Stack
+## Tech Stack
 - Language: **C++**
 - Algorithms: Brute Force, Greedy, Dynamic Programming, ILP, Genetic Algorithms
 
@@ -31,6 +31,6 @@ This project addresses the **0/1 Knapsack problem** applied to logistics: how to
 - ILP solver uses greedy as initialization, pruning search space effectively.  
 - Genetic Algorithm implemented to experiment with evolutionary techniques.
 
-## 👥 Authors
+## Authors
 - Francisco Rafael dos Santos Borralho  
 - Gonçalo Tavares de Pinho Mendes Calvo
