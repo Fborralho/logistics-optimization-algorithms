@@ -1,36 +1,40 @@
-# Truck Pallet Packing Optimization
+# Truck Pallet Packing — Optimization Algorithms
 
-This project addresses the **0/1 Knapsack problem** applied to logistics: how to load pallets into delivery trucks to maximize profit without exceeding capacity. Different algorithmic approaches were implemented and compared.
+Academic C++ project exploring the **0/1 Knapsack Problem** in a logistics setting: selecting pallets for a delivery truck to maximize total profit without exceeding its weight capacity.
 
-## Features
-- Import datasets of trucks and pallets from `.csv` files.
-- Multiple solvers implemented:
-  - **Exhaustive Search** (brute force) – finds the optimal solution by exploring all subsets.
-  - **Greedy Algorithm** – fast heuristic based on profit-to-weight ratio.
-  - **Dynamic Programming** – efficient solution with optimal substructure.
-  - **Integer Linear Programming (ILP)** with Branch-and-Bound – optimal search with pruning.
-  - (Optional) **Genetic Algorithm** – experimental solver for evolutionary optimization.
+## Problem
 
-## Tech Stack
-- Language: **C++**
-- Algorithms: Brute Force, Greedy, Dynamic Programming, ILP, Genetic Algorithms
+Each pallet has a weight and a profit, and each truck has a maximum load capacity. The optimization goal is to select a subset of pallets that maximizes profit while satisfying the capacity constraint.
 
-## Complexity
-- Exhaustive: `O(2^n)`  
-- Greedy: `O(n log n)`  
-- Dynamic Programming: `O(n * W)`  
-- ILP with pruning: much faster than exhaustive in practice
+This problem can be approached with different trade-offs between optimality, runtime and memory consumption.
 
-##  User Interface
-- Load dataset by typing its index (e.g. `05` → `Pallets_05.csv`, `TruckAndPallets_05.csv`).
-- Select solver to run and display results.
-- View loaded pallets and truck capacity.
+## Documented algorithmic approaches
 
-## Highlights
-- Greedy algorithm designed for **high performance** with large datasets.  
-- ILP solver uses greedy as initialization, pruning search space effectively.  
-- Genetic Algorithm implemented to experiment with evolutionary techniques.
+The original project description covers the following strategies:
+
+| Approach | Main idea | Trade-off |
+| --- | --- | --- |
+| Exhaustive search | Explore subsets of pallets | Exact but exponential in the number of pallets |
+| Greedy heuristic | Prioritize pallets by profit-to-weight ratio | Fast, but not guaranteed to be optimal |
+| Dynamic programming | Reuse subproblem solutions | Exact for integer capacities, with capacity-dependent complexity |
+| Branch-and-bound / integer optimization | Use bounds to prune candidate solutions | Can reduce search effort, but runtime depends on the instance |
+| Genetic algorithm | Explore candidate solutions with evolutionary operators | Experimental heuristic; no optimality guarantee |
+
+## Input and output described by the project
+
+- CSV input datasets with truck capacities and pallet weights/profits.
+- Solver selection for algorithm comparison.
+- Result reporting for the selected pallets and profit/capacity trade-off.
+
+## Repository status
+
+**This public GitHub repository currently contains only this README.** No C++ source code, datasets, build configuration, benchmarks or executable demonstrations are included here. The algorithms above describe the academic project scope; their implementation and performance **cannot be independently verified from this repository**.
+
+For that reason, this repository should not be treated as a reproducible software demonstration until the source and input examples are added.
 
 ## Authors
-- Francisco Rafael dos Santos Borralho  
+
+- Francisco Rafael dos Santos Borralho
 - Gonçalo Tavares de Pinho Mendes Calvo
+
+**Topic:** C++ · Algorithms · Operations Research · Dynamic Programming · Combinatorial Optimization
